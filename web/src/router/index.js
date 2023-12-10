@@ -11,7 +11,6 @@ const routes = [
     component: LogIn,
     meta: {
       requestAuth: false,
-      hideComponent: true,
     }
   },
   {
@@ -20,7 +19,6 @@ const routes = [
     component: Register,
     meta: {
       requestAuth: false,
-      hideComponent: true,
     }
   },
   {
@@ -29,7 +27,6 @@ const routes = [
     component: Home,
     meta: {
       requestAuth: true,
-      hideComponent: false,
     }
   },
 ]
