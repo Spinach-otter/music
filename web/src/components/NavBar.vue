@@ -1,15 +1,15 @@
 <template>
   <div class="menu-wrapper">
     <div class="menu-title">
-      <span class="iconfont icon-24gf-bag"></span>
+      <span class="iconfont icon-moonbyueliang"></span>
       <span class="title-text">Music</span>
     </div>
     <div class="content">
       <div class="person-info">
-        <img src="../assets/head_portrait.jpg" alt="" />
+        <img :src="$store.state.user.avatar" alt="" />
         <div class="person-name">
-          <div class="name">MAOS</div>
-          <span class="detail">前端小白</span>
+          <div class="name">{{ $store.state.user.username }}</div>
+          <!-- <span class="detail">前端小白</span> -->
         </div>
       </div>
       <div class="menu-content">
@@ -29,7 +29,7 @@
             <span class="iconfont icon-shezhi"></span>
             <div class="item-name">Settings</div>
           </div>
-          <div class="menu-list-item">
+          <div class="menu-list-item bottom-item">
             <div class="block"></div>
             <span class="iconfont icon-jinru"></span>
             <div class="item-name">
@@ -78,7 +78,7 @@ export default {
   },
   data() {
     return {
-      themeDark: false,
+      theme: false,
     };
   },
   mounted() {
@@ -111,8 +111,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 .menu-wrapper {
+  border-right: 1px solid rgb(229, 233, 236);
   width: 220px;
-  border-radius: 20px;
+  height: 80vh;
+  //   border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   background-color: var(--bg-color);
   padding: 20px;
   box-sizing: border-box;
@@ -132,7 +136,7 @@ export default {
       transition: 0.6s;
       color: var(--theme-info-text-color);
     }
-    .icon-24gf-bag {
+    .icon-moonbyueliang {
       font-size: 30px;
       padding-left: 10px;
       color: rgb(103, 56, 223);
@@ -261,6 +265,9 @@ export default {
               width: 100%;
             }
           }
+        }
+        .bottom-item {
+          margin-top: 30vh;
         }
       }
     }
