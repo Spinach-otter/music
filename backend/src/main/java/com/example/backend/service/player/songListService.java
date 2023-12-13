@@ -8,4 +8,5 @@ import java.util.Map;
 public interface songListService {
     List<songList> getsongList();
     Map<String,String> getsong(Integer i);
+    List<songList> searchSong(String filter);
 }

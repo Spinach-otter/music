@@ -19,11 +19,11 @@
             <span class="iconfont icon-caidan"></span>
             <div class="item-name">Home</div>
           </div>
-          <div class="menu-list-item">
+          <!-- <div class="menu-list-item">
             <div class="block"></div>
             <span class="iconfont icon-gouwu"></span>
             <div class="item-name">Like</div>
-          </div>
+          </div> -->
           <div class="menu-list-item">
             <div class="block"></div>
             <span class="iconfont icon-shezhi"></span>

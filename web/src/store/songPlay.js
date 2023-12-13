@@ -15,13 +15,10 @@ export default ({
         updateList(state, songList) {
             state.songList = songList;
         },
-        // updateSongInfo(state, song) {
-        //     state.music_name = song.songName;
-        //     state.music_src = song.path;
-        //     state.music_photo = song.photo;
-        // },
         updatePlaying(state) {
-            if (state.songPlaying) {
+            // console.log("updateplaying");
+            if (!state.songPlaying) {
+                // console.log("updateplaying bofang");
                 state.songPlaying = true;
                 state.play_icon = "pause";
             } else {
@@ -48,7 +45,7 @@ export default ({
                     context.commit("updateList", resp);
                     context.commit("updateSong", 0);
                     //data.success(resp);
-                    // console.log(resp);
+                    //console.log(context.state.songList);
                 },
             })
         },

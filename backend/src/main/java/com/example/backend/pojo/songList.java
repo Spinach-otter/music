@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @TableName("songList")
 public class songList {
+    private Integer id;
     private String songName;
     private String path;
     private String photo;

@@ -31,11 +31,12 @@
   justify-content: center;
   align-items: center; */
   align-items: center;
-  width: 75vw;
+  width: 74vw;
 }
 .music-image {
   width: 100px;
   height: 100px;
+  margin-top: 3px;
   margin-left: 8vw;
   border-radius: 50%;
   border: 3px solid rgb(229, 233, 236);

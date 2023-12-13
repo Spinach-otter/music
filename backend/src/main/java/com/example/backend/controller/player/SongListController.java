@@ -19,7 +19,10 @@ public class SongListController {
     public List<songList> getsongList() {
         return songListService.getsongList();
     }
-
+    @RequestMapping("/search/songlist/")
+    public List<songList> searchSong(@RequestParam Map<String,String> data) {
+        return songListService.searchSong(data.get("filter"));
+    }
     @RequestMapping("/get/song/")
     public Map<String,String> getSong(@RequestParam Map<String,String> data) {
         return songListService.getsong(Integer.valueOf(data.get("i")));

@@ -28,4 +28,9 @@ public class songListServiceImpl implements songListService {
         res.put("photo",ListOfSong.get(i).getPhoto());
         return res;
     }
+
+    @Override
+    public List<songList> searchSong(String filter) {
+        return songListMapper.findSong(filter);
+    }
 }

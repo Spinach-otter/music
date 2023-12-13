@@ -86,7 +86,7 @@ body {
   border-radius: 15px;
   justify-content: center;
   align-items: center;
-  margin-left: 35%;
+  margin-left: 30%;
   margin-top: 150px;
   margin-bottom: 246px;
   background: linear-gradient(
