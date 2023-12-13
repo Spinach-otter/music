@@ -3,6 +3,8 @@ import store from '@/store/index'
 import LogIn from '@/views/account/LoginView.vue'
 import Register from '@/views/account/RegisterView.vue'
 import Home from '@/views/home/HomeView.vue'
+import Settings from '@/views/settings/SettingsView.vue'
+import SettingPwd from '@/views/settings/SettingPwdView.vue'
 
 const routes = [
   {
@@ -25,6 +27,22 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/settings/",
+    name: "settings",
+    component: Settings,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/settings/pwd/",
+    name: "setting_pwd",
+    component: SettingPwd,
     meta: {
       requestAuth: true,
     }

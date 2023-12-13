@@ -12,7 +12,7 @@
               v-model="filter"
               @keyup.enter="refresh_list"
             />
-            <img src="@/assets/image/search.png" />
+            <!-- <img src="@/assets/image/search.png" /> -->
           </div>
         </section>
         <section class="shell">
@@ -63,7 +63,7 @@
   overflow: hidden;
 }
 .header {
-  width: 66vw;
+  width: 72vw;
   height: 12%;
   background-color: lightslategray;
   padding: 0 40px;
@@ -107,7 +107,7 @@
 }
 
 .shell {
-  width: 95%;
+  width: 96%;
   max-height: calc(90% - 25px);
   background-color: #fffb;
   margin: 8px auto;
@@ -151,10 +151,6 @@ td {
   /* display: flex; */
 }
 
-/* 偶数行背景色 */
-tbody tr:nth-child(even) {
-  background-color: #0000000b;
-}
 tbody tr {
   border-top: 2px solid rgb(229, 233, 236);
 }

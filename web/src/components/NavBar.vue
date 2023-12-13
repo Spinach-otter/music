@@ -14,7 +14,7 @@
       </div>
       <div class="menu-content">
         <div class="menu-list">
-          <div class="menu-list-item">
+          <div @click="gotohome" class="menu-list-item">
             <div class="block"></div>
             <span class="iconfont icon-caidan"></span>
             <div class="item-name">Home</div>
@@ -24,7 +24,7 @@
             <span class="iconfont icon-gouwu"></span>
             <div class="item-name">Like</div>
           </div> -->
-          <div class="menu-list-item">
+          <div @click="gotosetting" class="menu-list-item">
             <div class="block"></div>
             <span class="iconfont icon-shezhi"></span>
             <div class="item-name">Settings</div>
@@ -38,7 +38,7 @@
           </div>
 
           <div class="menu-list-item">
-            <div class="block"></div>
+            <!-- <div class="block"></div> -->
             <span class="iconfont icon-yueliang"></span>
             <div class="item-name">Dark Mode</div>
             <div class="btn">
@@ -72,6 +72,7 @@ export default {
     };
 
     return {
+      route,
       route_name,
       logout,
     };
@@ -93,6 +94,14 @@ export default {
         document.body.setAttribute("theme-color", "light");
         this.theme = !this.theme;
       }
+    },
+    gotohome() {
+      this.$router.push({ name: "home" });
+      console.log("home");
+    },
+    gotosetting() {
+      this.$router.push({ name: "settings" });
+      console.log("set");
     },
   },
 };
